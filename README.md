@@ -1,6 +1,18 @@
-# calculadora_imc_flutter
+# Calculadora de IMC com Flutter
+#### Realizada no curso Criação de Apps Android e IOs com Flutter do Daniel Ciolfi - Seção 13
 
-A new Flutter application.
+#####Tela inicial
+
+![Tela inicial](https://github.com/Fernando-Braulio/calculadora_imc_flutter/blob/master/screenshot/01.jpg)
+
+#####Validando se o formulário está vazio
+
+![Validação de form com Flutter](https://github.com/Fernando-Braulio/calculadora_imc_flutter/blob/master/screenshot/02.jpg)
+
+#####Obtendo o resultado
+
+![](https://github.com/Fernando-Braulio/calculadora_imc_flutter/blob/master/screenshot/03.jpg)
+
 
 ## Getting Started
 
