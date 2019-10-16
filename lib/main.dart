@@ -20,7 +20,10 @@ class _HomeState extends State<Home> {
   void _resetFields(){
     weightController.text = "";
     heightController.text = "";
-    _infoText = "Informe seus dados!";
+
+    setState(() {
+      _infoText = "Informe seus dados!";
+    });
   }
 
   void calculate(){
@@ -76,7 +79,7 @@ class _HomeState extends State<Home> {
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Peso (kg)",
+                  labelText: "Peso (kg - *apenas números*)",
                   labelStyle: TextStyle(
                       color: Colors.green
                   )
@@ -91,7 +94,7 @@ class _HomeState extends State<Home> {
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Altura (cm)",
+                  labelText: "Altura (cm - *apenas números*)",
                   labelStyle: TextStyle(
                       color: Colors.green
                   )
