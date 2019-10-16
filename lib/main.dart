@@ -37,7 +37,32 @@ class _HomeState extends State<Home> {
           ),
           TextField(
             keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              labelText: "Peso (kg)",
+              labelStyle: TextStyle(
+                  color: Colors.green
+              )
+            ),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.green,
+                fontSize: 25.0
+            ),
           ),
+          TextField(
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+                labelText: "Altura (cm)",
+                labelStyle: TextStyle(
+                    color: Colors.green
+                )
+            ),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.green,
+                fontSize: 25.0
+            ),
+          )
         ],
       ),
     );
