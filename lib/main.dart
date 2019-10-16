@@ -23,6 +23,31 @@ class _HomeState extends State<Home> {
     _infoText = "Informe seus dados!";
   }
 
+  void calculate(){
+    setState(() {
+      double weight = double.parse(weightController.text);
+      double height = double.parse(heightController.text) / 100;
+
+      double imc = weight / (height * height);
+
+      if(imc < 17){
+        _infoText = "Muito abaixo do peso (${imc.toStringAsPrecision(3)})";
+      }else if(imc >= 17 && imc < 18.49){
+        _infoText = "Abaixo do peso (${imc.toStringAsPrecision(3)})";
+      }else if(imc >= 18.5 && imc < 24.99){
+        _infoText = "Peso Ideal (${imc.toStringAsPrecision(3)})";
+      }else if(imc >= 25 && imc < 29.99){
+        _infoText = "Levemente acima do peso (${imc.toStringAsPrecision(3)})";
+      }else if(imc >= 30 && imc < 34.99){
+        _infoText = "Obesidade I (${imc.toStringAsPrecision(3)})";
+      }else if(imc >= 35 && imc < 39.99){
+        _infoText = "Obesidade II (${imc.toStringAsPrecision(3)})";
+      }else if(imc >= 40){
+        _infoText = "Obesidade III (${imc.toStringAsPrecision(3)})";
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +108,7 @@ class _HomeState extends State<Home> {
               child: Container(
                 height: 50.0,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: calculate,
                   child: Text("Calcular", style: TextStyle(color: Colors.white, fontSize: 25.0)),
                   color: Colors.green,
                 ),
