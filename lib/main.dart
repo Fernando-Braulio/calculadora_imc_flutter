@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.green,
-                  fontSize: 25.0
+                  fontSize: 24.0
               ),
               controller: weightController,
             ),
@@ -102,7 +102,7 @@ class _HomeState extends State<Home> {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.green,
-                  fontSize: 25.0
+                  fontSize: 24.0
               ),
               controller: heightController,
             ),
